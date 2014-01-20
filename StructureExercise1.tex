@@ -48,6 +48,7 @@
 \usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
 \renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
 \renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
 
 %%% END Article customizations
 
@@ -63,9 +64,96 @@
 
 \section{Separation Energies}
 
-We demonstrate below two plots generated from a script which can be found on github, and which will be printed below.
+I demonstrate below two plots generated from a script which can be found on github, and which will be printed below.
 
-\includegraphics{
+First, for the proton separation energy:\\
+\vspace{1mm}
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{"ProtonSepEnergy"}
+\end{figure}
+
+We note that, as might be expected, the largest separation energies are found at high N, low Z parts of the range, while the high Z, low N regions have very small such energy. This makes sense, as in the former case we would expect to be near the neutron dripline, where the protons are vital for stability, wheras in the latter case we'd expect to be near the proton dripline and so expect it to be very easy to remove a proton(and so have low proton separation energy). The only exception is in the very borders near the high end of the neutron to proton ratio, where the separation energies become very small, which may be an effect of the extreme instability in that range.\\
+\newpage
+Next, for the neutron separation energies.\\
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{"NeutronSepEnergy"}
+\end{figure}
+
+We see as we would expect from the previous discussion something very much like an inverse of the proton separation energies, with the largest values for cases of low N and high Z, and the smallest values in cases of high N and low Z, again representing the relative instability of high N nuclei, and their relative propensity towards shedding neutrons, versus high Z nuclei which require those neutrons to be (more) stable.\\
+
+Finally we plot the binding energies here:\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{"BindingEnergy"}
+\end{figure}
+
+We see as we would trivially expect an increase in binding energy totals with increasing A.
+
+
+
+\section{Liquid Drop Model Results}
+
+I compare the results from the previous section to the liquid drop model using similar plots. I chose not to plot these on the same graphs because of the dificulty of comparsion. In addition, I have shown a "relative" comparison between the liquid drop results and the empirical results. I begin with the liquid drop model's results for the proton and neutron separation energies.
+For the proton separation energies we have:\\
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{"LiquidDropProtonSepEnergy"}
+\end{figure}
+\newpage
+And for the neutron separation energies we also have:\\
+\vspace{1mm}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth]{"LiquidDropNeutronSepEnergy"}
+\end{figure}
+\vspace{1mm}
+
+We see that this has the same features when it comes to the high Z/low N and low Z/high N limits as the empirical values, suggesting the equation is at least roughly correct. We will see in the binding energies that this is in fact a much better approximation than expected. \\
+
+First we look at the actual binding energies, which we see have the same structure as in the empirical results.
+\vspace{1mm}
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{"LiquidDropBindingEnergy"}
+\end{figure}
+\vspace{1mm}
+
+We then follow this with a look at the relative difference between the binding energies.\\
+
+\vspace{1mm}
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{"ComparisonLiquidDropExpBE"}
+\end{figure}
+\vspace{1mm}
+ 
+From this we see that the relative differences are throughout in the range of less than 50\% and are in general much closer, with the only exceptions being the extremely low Z and N cases, where we have differences ranging up to $400\%$. \\
+\newpage
+
+\section{Comparison of Terms in Emperical Mass Equation}
+
+Next we consider each of the terms in the Empirical Mass formula. These are shown below, with binding energy per nucleon shown. 
+This will allow us to see the effects of each term. 
+
+
+\vspace{1mm}
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{"LiquidDropTerms"}
+\end{figure}
+\vspace{1mm}
+
+We see as expected that the volume term provides a constant stability, which is counteracted by the coulomb and surface terms, and that indeed even the surface term alone seems to be enough to begin a strong structure in the system, but that we do not produce a curve with a peak until either the coulomb or coulomb and pairing terms enter into the equation(it is hard to judge the coulomb term because of the fact that there is a wide variety in the energy spread and so how and if it peaks is difficult to say.) This suggest the vital importance of all of these terms, at least at a prima facie level, in order to explain nuclei, as  the curve of binding energy is vital for explaining astrophysical abundances, and without the maxima would utterly change the composition of the cosmos.\\
+
+
+\section{Neutron Drip Line}
+
+We 
+
+
 
 
 \end{document}
