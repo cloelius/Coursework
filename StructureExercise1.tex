@@ -31,6 +31,7 @@
 \usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
 % These packages are all incorporated in the memoir class to one degree or another...
 \usepackage{graphicx}
+\usepackage{hyperref}
 %%% HEADERS & FOOTERS
 \usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
 \pagestyle{fancy} % options: empty , plain , fancy
@@ -147,13 +148,21 @@ This will allow us to see the effects of each term.
 \vspace{1mm}
 
 We see as expected that the volume term provides a constant stability, which is counteracted by the coulomb and surface terms, and that indeed even the surface term alone seems to be enough to begin a strong structure in the system, but that we do not produce a curve with a peak until either the coulomb or coulomb and pairing terms enter into the equation(it is hard to judge the coulomb term because of the fact that there is a wide variety in the energy spread and so how and if it peaks is difficult to say.) This suggest the vital importance of all of these terms, at least at a prima facie level, in order to explain nuclei, as  the curve of binding energy is vital for explaining astrophysical abundances, and without the maxima would utterly change the composition of the cosmos.\\
-
+\newpage
 
 \section{Neutron Drip Line}
 
-We 
+I use a separate program to calculate the neutron drip line by finding the zero's of the function using sympy. The point where the binding energy becomes negative is the point where we anticipate finding the neutron dripline. Doing so we find the following plot:\\
+
+\vspace{1mm}
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{"NeutronDripLine"}
+\end{figure}
+\vspace{1mm}
 
 
+Investigating we see that in the range of 8 to 9 protons we would expect the neutron drip line at approximately N=40. However, the empirical value of the neutron drip line appears to be 16 for Oxygen(as can be found at \url{https://groups.nscl.msu.edu/theory/content/oxygen-isotopes-beyond-neutron-dripline}), and we also find that for fluorine the dripline is at N=22(\url{http://cerncourier.com/cws/article/cern/31868}). We thus see that the Emperical Mass Formula overpredicts the location of the neutron drip line by as much as $\Delta N=20$ for small values of N. It also seems clear that as the values get higher this graph shows a linear increase in the overall number of N, reaching values on the order of 800, which seems very unlikely for some of the highest Z nuclei.  
 
 
 \end{document}
